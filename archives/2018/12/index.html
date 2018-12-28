@@ -1,58 +1,96 @@
-extends _inc/layout.jade
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Archives: 2018/12 | Johnson的平行空间</title>
+  <meta name="author" content="Johnson Wang">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-block head_title
-    title 
-        if !is_year()
-            = 'Sitemap | ' + config.title
+  
+  <meta property="og:site_name" content="Johnson的平行空间">
+
+  
+    <meta property="og:image" content="">
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Johnson的平行空间" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+</head>
+</html>
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Johnson的平行空间</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+<div class="alignleft" style="margin-top: 15px">
+
+
+</div>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="wrapper">
+<h2 class="archive-title">2018/12</h2>
+
+
+  <div class="archive">
+    
+      <article class="post">
+        <div class="post-content">
+          <header>
+            <div class="icon"></div>
+            <time datetime="2018-12-28T10:51:27.000Z"><a href="/2018/12/28/hello-world/">2018-12-28</a></time>
             
-        else
-            = page.year + '/' + page.month + ' | ' + config.title
+              <h1 class="title"><a href="/2018/12/28/hello-world/">Hello World</a></h1>
             
+          </header>
+        </div>
+      </article>
+    
+  </div>
 
-block main
+</div>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 Johnson Wang
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
 
-    if !is_year()
 
-        div.sitemap
-        
-            p.archive-title Sitemap
-                        
-            aside
-                h2 Categories
-                != list_categories({ show_count: false })
-                
-            aside
-                h2 Tags
-                != list_tags({ show_count: false })
-                
-            aside
-                h2 Archives
-                != list_archives({ show_count: false })
 
-    else
-        div.page-archive
-        
-            p.archive-title
-                = page.year + '/' + page.month
-        
-            ul.archive
 
-                - page.posts.each(function(article){
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
-                    li
-
-                        if article.link
-                            time(datetime=date_xml(article.date))
-                                = date(article.date)
-                            h2.list-title
-                                a(href=url_for(article.link) target="_blank")= article.title || 'No Title'
-
-                        else
-                            time(datetime=date_xml(article.date))
-                                = date(article.date)
-                            h2.list-title
-                                a(href=url_for(article.path))= article.title || 'No Title'
-
-                - })
-
-        include _inc/pagination.jade
+</body>
+</html>
